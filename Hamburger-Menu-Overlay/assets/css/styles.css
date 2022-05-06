@@ -1,5 +1,6 @@
 :root {
-  --primary-color: rgba(13, 110, 139, 0.60);
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --primary-color-alt: rgba(13, 110, 139, 0.233);
   --secondary-color: rgba(229, 148, 0, 0.9);
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
@@ -11,13 +12,17 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-}
-
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
 }
 
 .container {
@@ -36,7 +41,7 @@ a {
 
 #showcase::before {
   content: '';
-  background: url(../img/showcase.jpg) no-repeat center center/cover;
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -59,19 +64,21 @@ a {
 }
 
 #showcase p {
-font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
-.btn  {
+.btn {
   display: inline-block;
   border: none;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   color: #fff;
-  margin-top: 1rem;
-  padding: 1rem 3rem;
-  transition: opacity 1s ease-in-out;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
 }
 
 .btn:hover {
   opacity: 0.8;
+  background: var(--primary-color-alt);
 }
